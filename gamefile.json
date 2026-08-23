@@ -289,14 +289,21 @@
           },
 
           "Discard": {
+            "isDefaultSection": true,
+            "title": "Discard",
             "isHidden": "no",
             "height": 6,
-            "alignment": "DECK",
+            "alignment": "NONE",
             "displayedTitle": "Graveyard",
             "isHorizontalAllowed": false,
+            "isGroupForbidden": true,
             "noAutoPayTo": true,
             "noQuickActions": false,
-            "isGroupForbidden": false,
+            "opponentAlignment": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false,
             "logWhenPlayed": true
           },
 
