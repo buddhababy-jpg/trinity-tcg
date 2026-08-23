@@ -121,37 +121,20 @@
     "rules": "Activate during either player's turn when an Afterimage monster you control would be Broken by an attack. Change that monster's stance, then recalculate the battle using its new current combat value. If the attacking monster no longer exceeds that value, prevent the Break. Then tap the attacking monster if it is not already tapped. Pay the cost by tapping 4 ready Mana, or Burn 4 already-tapped Mana by returning them to the Mana Deck."
   },
 
-  "mana_shadow": {
-    "id": "mana_shadow",
+  "mana": {
+    "id": "mana",
     "face": {
       "front": {
-        "name": { "name": "Shadow Mana" },
+        "name": { "name": "Mana" },
         "type": "Mana",
         "cost": 0,
-        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-shadow.png"
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana.png"
       }
     },
-    "name": "Shadow Mana",
+    "name": "Mana",
     "type": "Mana",
     "cost": 0,
-    "element": "Shadow",
-    "archetype": "Mana"
-  },
-
-  "mana_spirit": {
-    "id": "mana_spirit",
-    "face": {
-      "front": {
-        "name": { "name": "Spirit Mana" },
-        "type": "Mana",
-        "cost": 0,
-        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-spirit.png"
-      }
-    },
-    "name": "Spirit Mana",
-    "type": "Mana",
-    "cost": 0,
-    "element": "Spirit",
+    "element": "Neutral",
     "archetype": "Mana"
   }
 }
