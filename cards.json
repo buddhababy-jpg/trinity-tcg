@@ -121,6 +121,124 @@
     "rules": "Activate during either player's turn when an Afterimage monster you control would be Broken by an attack. Change that monster's stance, then recalculate the battle using its new current combat value. If the attacking monster no longer exceeds that value, prevent the Break. Then tap the attacking monster if it is not already tapped. Pay the cost by tapping 4 ready Mana, or Burn 4 already-tapped Mana by returning them to the Mana Deck."
   },
 
+  "afterimage_yurei": {
+    "id": "afterimage_yurei",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Yurei, Lantern Keeper" },
+        "type": "Monster",
+        "cost": 2,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-yurei.png"
+      }
+    },
+    "name": "Afterimage — Yurei, Lantern Keeper",
+    "type": "Monster",
+    "cost": 2,
+    "element": "Spirit",
+    "archetype": "Afterimage",
+    "atk": 900,
+    "def": 1700,
+    "weakness": "Fire",
+    "effectCost": 2,
+    "rules": "Lingering Light — Once per turn, after another Afterimage monster you control Shifts, you may change Yurei's stance. Follow the Lantern — Activate 2: Choose another Afterimage monster you control. Shift it one slot. If it moved adjacent to Yurei, it gets +300 to its current combat value until end of turn."
+  },
+
+  "afterimage_sora": {
+    "id": "afterimage_sora",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Sora, Severed Thread" },
+        "type": "Monster",
+        "cost": 5,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-sora.png"
+      }
+    },
+    "name": "Afterimage — Sora, Severed Thread",
+    "type": "Monster",
+    "cost": 5,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "atk": 2700,
+    "def": 1900,
+    "weakness": "Light",
+    "effectCost": 3,
+    "rules": "Wrong Place — Once per turn, after Sora Shifts, choose one opposing monster adjacent to his new slot. That monster gets -400 to its current combat value until end of turn. Severed Thread — Activate 3: Change Sora's stance. Then Shift him one slot. If he becomes adjacent to an opposing monster he was not adjacent to before, he gets +500 ATK until end of turn."
+  },
+
+  "afterimage_the_space_between_footsteps": {
+    "id": "afterimage_the_space_between_footsteps",
+    "face": {
+      "front": {
+        "name": { "name": "The Space Between Footsteps" },
+        "type": "Spell",
+        "cost": 4,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-the-space-between-footsteps.png"
+      }
+    },
+    "name": "The Space Between Footsteps",
+    "type": "Spell",
+    "cost": 4,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "rules": "Choose up to three Afterimage monsters you control. You may Shift each chosen monster once, in any order. Then you may change the stance of one of those monsters. Monsters moved by this effect cannot attack Life this turn."
+  },
+
+  "afterimage_everyone_remembers_you_wrong": {
+    "id": "afterimage_everyone_remembers_you_wrong",
+    "face": {
+      "front": {
+        "name": { "name": "Everyone Remembers You Wrong" },
+        "type": "Spell",
+        "cost": 5,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-everyone-remembers-you-wrong.png"
+      }
+    },
+    "name": "Everyone Remembers You Wrong",
+    "type": "Spell",
+    "cost": 5,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "rules": "Choose one Afterimage monster in your Discard with cost 4 or less. Place it into an empty Monster Slot in Defense Stance. It cannot change to Attack Stance this turn. At the end of your next turn, if that monster is still on the field, return it to your hand."
+  },
+
+  "not_so_fast": {
+    "id": "not_so_fast",
+    "face": {
+      "front": {
+        "name": { "name": "Not So Fast." },
+        "type": "Hand Trap",
+        "cost": 0,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/not-so-fast.png"
+      }
+    },
+    "name": "Not So Fast.",
+    "type": "Hand Trap",
+    "cost": 0,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "effectCost": 2,
+    "rules": "When an opposing monster declares an attack: You may reveal this card from your hand. Tap 2 Mana. Change the attacking monster to Defense Stance. The attack ends. Then discard this card."
+  },
+
+  "i_saw_that_coming": {
+    "id": "i_saw_that_coming",
+    "face": {
+      "front": {
+        "name": { "name": "I Saw That Coming." },
+        "type": "Hand Trap",
+        "cost": 0,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/i-saw-that-coming.png"
+      }
+    },
+    "name": "I Saw That Coming.",
+    "type": "Hand Trap",
+    "cost": 0,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "effectCost": 2,
+    "rules": "When your opponent activates a monster's activated effect: You may reveal this card from your hand. Tap 2 Mana. Increase that effect's activation cost by 2 Mana. Your opponent may pay the additional cost. If they do not, that effect ends. Then discard this card."
+  },
+
   "mana": {
     "id": "mana",
     "face": {
