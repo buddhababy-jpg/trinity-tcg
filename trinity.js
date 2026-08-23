@@ -1,33 +1,53 @@
-// TRINITY Alpha 0.1 helper script for TCG Arena.
-// Intentionally minimal: combat, Break, Weakness, Quick-Plays and Burn are
-// player-resolved in the first alpha. This script only assists Mana handling.
-
 async function trinityGainMana() {
-  const manaDeck = cards?.ManaDeck ?? [];
-  const manaZone = cards?.ManaZone ?? [];
-  const room = Math.max(0, 15 - manaZone.length);
-  const amount = Math.min(3, room, manaDeck.length);
+  const manaZone = cards.ManaZone ?? [];
+  const manaDeck = cards.ManaDeck ?? [];
 
-  if (amount <= 0) {
-    functions.chatLog("cannot gain more Mana (Mana Zone is full or Mana Deck is empty)");
+  // Hard limit: never have more than 15 Mana in the Mana Zone.
+  const availableSpace = Math.max(0, 15 - manaZone.length);
+
+  if (availableSpace <= 0) {
+    functions.chatLog("Mana Zone is already at the 15 Mana limit.");
     return;
   }
 
-  await functions.drawFromExtraDeck("ManaDeck", amount, false, "ManaZone");
-  functions.chatLog("gained " + amount + " Mana");
+  if (manaDeck.length <= 0) {
+    functions.chatLog("No Mana remains in the Mana Deck.");
+    return;
+  }
+
+  // Gain up to 3, but never exceed the Mana Zone cap
+  // or the number of cards remaining in ManaDeck.
+  const amount = Math.min(3, availableSpace, manaDeck.length);
+
+  await functions.drawFromExtraDeck(
+    "ManaDeck",
+    amount,
+    false,
+    "ManaZone"
+  );
+
+  game.data.TrinityControls.manaTurns += 1;
+
+  functions.chatLog(
+    "Gained " + amount + " Mana. Mana Zone: " +
+    (manaZone.length + amount) + "/15."
+  );
 }
+
 
 async function trinityReadyMana() {
-  const mana = cards?.ManaZone ?? [];
-  if (!mana.length) return;
-  await functions.updateCards(mana, { isTapped: false });
-  functions.chatLog("readied Mana");
-}
+  const mana = cards.ManaZone ?? [];
 
-// Burn is deliberately manual in Alpha 0.1:
-// 1) Select the required number of ALREADY-TAPPED Mana cards.
-// 2) Move those Mana cards from ManaZone back to ManaDeck.
-// 3) Resolve the activated effect.
-//
-// This preserves the exact design rule: Burn is an alternative to tapping
-// fresh Mana, and only already-tapped Mana can be returned as Burn payment.
+  if (mana.length <= 0) {
+    return;
+  }
+
+  await functions.updateCards(
+    mana,
+    {
+      isTapped: false
+    }
+  );
+
+  functions.chatLog("Mana readied.");
+}
