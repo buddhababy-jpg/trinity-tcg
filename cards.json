@@ -1,7 +1,7 @@
 {
   "leader_aquaria": {
     "id": "leader_aquaria",
-    "face": { "front": { "name": { "name": "Aquaria, Tideborn Prodigy" }, "type": "Leader", "cost": 9, "image": "__BASE_URL__/assets/leader-aquaria.svg" } },
+    "face": { "front": { "name": { "name": "Aquaria, Tideborn Prodigy" }, "type": "Leader", "cost": 9, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-aquaria.svg" } },
     "name": "Aquaria, Tideborn Prodigy",
     "type": "Leader",
     "cost": 9,
@@ -14,7 +14,7 @@
   },
   "aquaria": {
     "id": "aquaria",
-    "face": { "front": { "name": { "name": "Aquaria, Water Sorceress" }, "type": "Monster", "cost": 5, "image": "__BASE_URL__/assets/aquaria.svg" } },
+    "face": { "front": { "name": { "name": "Aquaria, Water Sorceress" }, "type": "Monster", "cost": 5, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/aquaria.svg" } },
     "name": "Aquaria, Water Sorceress",
     "type": "Monster",
     "cost": 5,
@@ -28,7 +28,7 @@
   },
   "mizu": {
     "id": "mizu",
-    "face": { "front": { "name": { "name": "Mizu, Tideborn Familiar" }, "type": "Monster", "cost": 2, "image": "__BASE_URL__/assets/mizu.svg" } },
+    "face": { "front": { "name": { "name": "Mizu, Tideborn Familiar" }, "type": "Monster", "cost": 2, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mizu.svg" } },
     "name": "Mizu, Tideborn Familiar",
     "type": "Monster",
     "cost": 2,
@@ -41,7 +41,7 @@
   },
   "kira": {
     "id": "kira",
-    "face": { "front": { "name": { "name": "Volt Hunter Kira" }, "type": "Monster", "cost": 4, "image": "__BASE_URL__/assets/kira.svg" } },
+    "face": { "front": { "name": { "name": "Volt Hunter Kira" }, "type": "Monster", "cost": 4, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/kira.svg" } },
     "name": "Volt Hunter Kira",
     "type": "Monster",
     "cost": 4,
@@ -54,7 +54,7 @@
   },
   "iron_golem": {
     "id": "iron_golem",
-    "face": { "front": { "name": { "name": "Iron Golem" }, "type": "Monster", "cost": 5, "image": "__BASE_URL__/assets/iron-golem.svg" } },
+    "face": { "front": { "name": { "name": "Iron Golem" }, "type": "Monster", "cost": 5, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/iron-golem.svg" } },
     "name": "Iron Golem",
     "type": "Monster",
     "cost": 5,
@@ -67,7 +67,7 @@
   },
   "glass_assassin": {
     "id": "glass_assassin",
-    "face": { "front": { "name": { "name": "Glass Assassin" }, "type": "Monster", "cost": 4, "image": "__BASE_URL__/assets/glass-assassin.svg" } },
+    "face": { "front": { "name": { "name": "Glass Assassin" }, "type": "Monster", "cost": 4, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/glass-assassin.svg" } },
     "name": "Glass Assassin",
     "type": "Monster",
     "cost": 4,
@@ -80,7 +80,7 @@
   },
   "flash_current": {
     "id": "flash_current",
-    "face": { "front": { "name": { "name": "Flash Current" }, "type": "Quick-Play", "cost": 3, "image": "__BASE_URL__/assets/flash-current.svg" } },
+    "face": { "front": { "name": { "name": "Flash Current" }, "type": "Quick-Play", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/flash-current.svg" } },
     "name": "Flash Current",
     "type": "Quick-Play",
     "cost": 3,
@@ -90,7 +90,7 @@
   },
   "dodge": {
     "id": "dodge",
-    "face": { "front": { "name": { "name": "Dodge!" }, "type": "Quick-Play", "cost": 2, "image": "__BASE_URL__/assets/dodge.svg" } },
+    "face": { "front": { "name": { "name": "Dodge!" }, "type": "Quick-Play", "cost": 2, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/dodge.svg" } },
     "name": "Dodge!",
     "type": "Quick-Play",
     "cost": 2,
@@ -100,7 +100,7 @@
   },
   "tidal_reversal": {
     "id": "tidal_reversal",
-    "face": { "front": { "name": { "name": "Tidal Reversal" }, "type": "Quick-Play", "cost": 3, "image": "__BASE_URL__/assets/tidal-reversal.svg" } },
+    "face": { "front": { "name": { "name": "Tidal Reversal" }, "type": "Quick-Play", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/tidal-reversal.svg" } },
     "name": "Tidal Reversal",
     "type": "Quick-Play",
     "cost": 3,
@@ -110,7 +110,7 @@
   },
   "soaked_ground": {
     "id": "soaked_ground",
-    "face": { "front": { "name": { "name": "Soaked Ground" }, "type": "Spell", "cost": 3, "image": "__BASE_URL__/assets/soaked-ground.svg" } },
+    "face": { "front": { "name": { "name": "Soaked Ground" }, "type": "Spell", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/soaked-ground.svg" } },
     "name": "Soaked Ground",
     "type": "Spell",
     "cost": 3,
@@ -120,7 +120,7 @@
   },
   "mana_water": {
     "id": "mana_water",
-    "face": { "front": { "name": { "name": "Water Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-water.svg" } },
+    "face": { "front": { "name": { "name": "Water Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-water.svg" } },
     "name": "Water Mana",
     "type": "Mana",
     "cost": 0,
@@ -129,7 +129,7 @@
   },
   "mana_void": {
     "id": "mana_void",
-    "face": { "front": { "name": { "name": "Void Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-void.svg" } },
+    "face": { "front": { "name": { "name": "Void Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-void.svg" } },
     "name": "Void Mana",
     "type": "Mana",
     "cost": 0,
@@ -138,7 +138,7 @@
   },
   "mana_volt": {
     "id": "mana_volt",
-    "face": { "front": { "name": { "name": "Volt Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-volt.svg" } },
+    "face": { "front": { "name": { "name": "Volt Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-volt.svg" } },
     "name": "Volt Mana",
     "type": "Mana",
     "cost": 0,
