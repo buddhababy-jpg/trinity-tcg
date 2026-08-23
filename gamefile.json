@@ -49,7 +49,7 @@
         {
           "id": "BREAK",
           "name": "BREAK",
-          "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/break-token.svg"
+          "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/break-token.png"
         }
       ],
       "beforeGameStart": {
@@ -221,10 +221,10 @@
   },
   "cards": {
     "dataUrl": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/cards.json",
-    "cardBack": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/card-back.svg",
+    "cardBack": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/card-back.png",
     "extraCardBacks": {
-      "Mana": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-back.svg",
-      "Leader": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-back.svg"
+      "Mana": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-back.png",
+      "Leader": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-back.png"
     }
   },
   "scriptsUrls": [
