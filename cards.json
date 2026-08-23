@@ -1,0 +1,148 @@
+{
+  "leader_aquaria": {
+    "id": "leader_aquaria",
+    "face": { "front": { "name": { "name": "Aquaria, Tideborn Prodigy" }, "type": "Leader", "cost": 9, "image": "__BASE_URL__/assets/leader-aquaria.svg" } },
+    "name": "Aquaria, Tideborn Prodigy",
+    "type": "Leader",
+    "cost": 9,
+    "element": ["Water", "Void"],
+    "archetype": "Tideborn",
+    "atk": 2800,
+    "def": 2400,
+    "weakness": "Volt",
+    "rules": "Leader. Manifest 9. Permanent death if destroyed after Manifesting."
+  },
+  "aquaria": {
+    "id": "aquaria",
+    "face": { "front": { "name": { "name": "Aquaria, Water Sorceress" }, "type": "Monster", "cost": 5, "image": "__BASE_URL__/assets/aquaria.svg" } },
+    "name": "Aquaria, Water Sorceress",
+    "type": "Monster",
+    "cost": 5,
+    "element": "Water",
+    "archetype": "Tideborn",
+    "atk": 2400,
+    "def": 1800,
+    "weakness": "Volt",
+    "effectCost": 3,
+    "rules": "Tidal Pull — Activate 3: target monster gets -800 to its current combat value this battle. If it is Weak to WATER, -1200 instead. Pay by tapping 3 ready Mana OR Burn 3 already-tapped Mana."
+  },
+  "mizu": {
+    "id": "mizu",
+    "face": { "front": { "name": { "name": "Mizu, Tideborn Familiar" }, "type": "Monster", "cost": 2, "image": "__BASE_URL__/assets/mizu.svg" } },
+    "name": "Mizu, Tideborn Familiar",
+    "type": "Monster",
+    "cost": 2,
+    "element": "Water",
+    "archetype": "Tideborn",
+    "atk": 800,
+    "def": 800,
+    "weakness": "Volt",
+    "rules": "Playful Current — When summoned, you may change this monster's stance."
+  },
+  "kira": {
+    "id": "kira",
+    "face": { "front": { "name": { "name": "Volt Hunter Kira" }, "type": "Monster", "cost": 4, "image": "__BASE_URL__/assets/kira.svg" } },
+    "name": "Volt Hunter Kira",
+    "type": "Monster",
+    "cost": 4,
+    "element": "Volt",
+    "archetype": "Hunter",
+    "atk": 2000,
+    "def": 1200,
+    "weakness": "Earth",
+    "rules": "Exploit — When Kira Breaks a monster through its Weakness, ready Kira once per turn."
+  },
+  "iron_golem": {
+    "id": "iron_golem",
+    "face": { "front": { "name": { "name": "Iron Golem" }, "type": "Monster", "cost": 5, "image": "__BASE_URL__/assets/iron-golem.svg" } },
+    "name": "Iron Golem",
+    "type": "Monster",
+    "cost": 5,
+    "element": "Earth",
+    "archetype": "Sentinel",
+    "atk": 1500,
+    "def": 3500,
+    "weakness": "Water",
+    "rules": "Stonewall — This monster's DEF cannot be reduced below 2500."
+  },
+  "glass_assassin": {
+    "id": "glass_assassin",
+    "face": { "front": { "name": { "name": "Glass Assassin" }, "type": "Monster", "cost": 4, "image": "__BASE_URL__/assets/glass-assassin.svg" } },
+    "name": "Glass Assassin",
+    "type": "Monster",
+    "cost": 4,
+    "element": "Void",
+    "archetype": "Assassin",
+    "atk": 3100,
+    "def": 900,
+    "weakness": "Light",
+    "rules": "Fragile Edge — Gains +500 ATK during your turn."
+  },
+  "flash_current": {
+    "id": "flash_current",
+    "face": { "front": { "name": { "name": "Flash Current" }, "type": "Quick-Play", "cost": 3, "image": "__BASE_URL__/assets/flash-current.svg" } },
+    "name": "Flash Current",
+    "type": "Quick-Play",
+    "cost": 3,
+    "element": "Water",
+    "archetype": "Tideborn",
+    "rules": "Activate during either player's turn. Target monster gets +700 ATK or +700 DEF until the end of the current battle."
+  },
+  "dodge": {
+    "id": "dodge",
+    "face": { "front": { "name": { "name": "Dodge!" }, "type": "Quick-Play", "cost": 2, "image": "__BASE_URL__/assets/dodge.svg" } },
+    "name": "Dodge!",
+    "type": "Quick-Play",
+    "cost": 2,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "rules": "Activate during either player's turn. Change one target monster from Attack Stance to Defense Stance before combat comparison."
+  },
+  "tidal_reversal": {
+    "id": "tidal_reversal",
+    "face": { "front": { "name": { "name": "Tidal Reversal" }, "type": "Quick-Play", "cost": 3, "image": "__BASE_URL__/assets/tidal-reversal.svg" } },
+    "name": "Tidal Reversal",
+    "type": "Quick-Play",
+    "cost": 3,
+    "element": "Water",
+    "archetype": "Tideborn",
+    "rules": "When a monster declares an attack, if its ATK is less than or equal to the target's current combat value, return the attacker to its owner's hand."
+  },
+  "soaked_ground": {
+    "id": "soaked_ground",
+    "face": { "front": { "name": { "name": "Soaked Ground" }, "type": "Spell", "cost": 3, "image": "__BASE_URL__/assets/soaked-ground.svg" } },
+    "name": "Soaked Ground",
+    "type": "Spell",
+    "cost": 3,
+    "element": "Water",
+    "archetype": "Generic",
+    "rules": "Choose one enemy monster. Until end of your next turn, it gains Weakness: VOLT."
+  },
+  "mana_water": {
+    "id": "mana_water",
+    "face": { "front": { "name": { "name": "Water Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-water.svg" } },
+    "name": "Water Mana",
+    "type": "Mana",
+    "cost": 0,
+    "element": "Water",
+    "archetype": "Mana"
+  },
+  "mana_void": {
+    "id": "mana_void",
+    "face": { "front": { "name": { "name": "Void Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-void.svg" } },
+    "name": "Void Mana",
+    "type": "Mana",
+    "cost": 0,
+    "element": "Void",
+    "archetype": "Mana"
+  },
+  "mana_volt": {
+    "id": "mana_volt",
+    "face": { "front": { "name": { "name": "Volt Mana" }, "type": "Mana", "cost": 0, "image": "__BASE_URL__/assets/mana-volt.svg" } },
+    "name": "Volt Mana",
+    "type": "Mana",
+    "cost": 0,
+    "element": "Volt",
+    "archetype": "Mana"
+  }
+}

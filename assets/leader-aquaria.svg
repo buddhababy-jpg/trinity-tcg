@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="744" height="1039" viewBox="0 0 744 1039">
+<rect width="744" height="1039" rx="38" fill="#12395a"/>
+<rect x="24" y="24" width="696" height="991" rx="28" fill="none" stroke="#7dd3fc" stroke-width="8"/>
+<circle cx="372" cy="430" r="190" fill="none" stroke="#7dd3fc" stroke-width="12" opacity=".65"/>
+<path d="M372 225 L420 382 L577 430 L420 478 L372 635 L324 478 L167 430 L324 382 Z" fill="none" stroke="#7dd3fc" stroke-width="10"/>
+<text x="372" y="770" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" fill="white" font-weight="700">AQUARIA</text>
+<text x="372" y="840" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#7dd3fc">LEADER 2800 / 2400</text>
+<text x="372" y="950" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="white" opacity=".7">TRINITY ALPHA PLACEHOLDER</text>
+</svg>
