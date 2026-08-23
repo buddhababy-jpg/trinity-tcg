@@ -1,18 +1,21 @@
 {
-  "name": "TRINITY Alpha 0.1",
+  "name": "TRINITY Alpha 0.2",
   "cardRotation": 90,
-  "customHelp": "TRINITY Alpha 0.1\n\nCore prototype rules:\n- 20 Life.\n- 4 Monster Slots.\n- Monsters may be summoned upright (Attack Stance) or tapped sideways (Defense Stance).\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- Upright monsters defend with ATK; tapped monsters defend with DEF.\n- After a monster attacks, tap it.\n- To Break a monster, the attacker's ATK must exceed the target's current combat value (ATK if upright, DEF if tapped).\n- Put a BREAK marker on a Broken monster. Broken monsters do not protect Life; the next successful attack against that monster destroys it.\n- Quick-Play Spells may be used on either player's turn.\n- Mana: separate 15-card Mana Deck. Gain 3 Mana each turn, up to 15 total in your Mana Zone. Tap Mana to pay costs.\n- Burn: instead of tapping fresh Mana for an activated effect, you may return the same number of ALREADY-TAPPED Mana cards from your Mana Zone to the Mana Deck.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.",
+  "customHelp": "TRINITY Alpha 0.2\n\nCore prototype rules:\n- 20 Life.\n- 4 Monster Slots.\n- Monsters may be summoned upright (Attack Stance) or tapped sideways (Defense Stance).\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- Upright monsters defend with ATK; tapped monsters defend with DEF.\n- After a monster attacks, tap it.\n- To Break a monster, the attacker's ATK must exceed the target's current combat value (ATK if upright, DEF if tapped).\n- Put a BREAK marker on a Broken monster. Broken monsters do not protect Life; the next successful attack against that monster destroys it.\n- Quick-Play Spells may be used on either player's turn.\n- Mana uses a separate 15-card Mana Deck containing generic Mana cards.\n- At the beginning of each of your turns, move 3 Mana from your Mana Deck to your Mana Zone, until all 15 have entered play.\n- Tap Mana to pay costs.\n- Burn: instead of tapping fresh Mana for an activated effect, you may return the same number of ALREADY-TAPPED Mana cards from your Mana Zone to the Mana Deck.\n- Burned Mana may be gained again on later turns.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.",
+
   "deckBuilding": {
     "mainFilters": ["type", "cost", "element", "archetype"],
     "costCurveIgnoredTypes": ["Mana", "Leader"],
+
     "formats": [
       {
         "title": "TRINITY Alpha",
-        "customCategories": ["Leader", "ManaDeck"],
+        "customCategories": ["Leader"],
         "gameplay": "Alpha",
         "deckRuleset": "Alpha"
       }
     ],
+
     "deckRulesets": {
       "Alpha": {
         "general": {
@@ -20,31 +23,45 @@
           "max": 40,
           "maxPerCard": 3
         },
+
         "categories": [
-          { "category": "Leader", "min": 1, "max": 1 },
-          { "category": "ManaDeck", "min": 15, "max": 15 }
+          {
+            "category": "Leader",
+            "min": 1,
+            "max": 1
+          }
         ]
       }
     }
   },
+
   "gameplay": {
     "Alpha": {
       "countersStartingValues": [20],
+
       "mulligan": {
         "startingHandSize": 5,
-        "mulliganCount": { "max": 1 },
+        "mulliganCount": {
+          "max": 1
+        },
+
         "mulliganCycle": {
           "info": "You may replace your entire opening hand once.",
           "steps": ["toBottom", "draw"],
-          "selectionRange": { "min": 5, "max": 99 },
+          "selectionRange": {
+            "min": 5,
+            "max": 99
+          },
           "keepCardsOrder": false
         }
       },
+
       "newTurn": {
         "drawOnStart": false,
         "drawPerTurn": 1,
         "sharedTurn": false
       },
+
       "draggableTokens": [
         {
           "id": "BREAK",
@@ -52,47 +69,130 @@
           "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/break-token.png"
         }
       ],
+
       "beforeGameStart": {
-        "boardCategoriesInSideboard": ["Leader", "ManaDeck"],
+        "boardCategoriesInSideboard": ["Leader"],
+
         "boardCardSelection": [
-          { "category": "Leader", "min": 1, "max": 1, "unselectedDestination": "RemoveHidden" }
+          {
+            "category": "Leader",
+            "min": 1,
+            "max": 1,
+            "unselectedDestination": "RemoveHidden"
+          }
+        ],
+
+        "initialBoardSetup": [
+          {
+            "createCardId": "mana",
+            "count": 15,
+            "destination": "ManaDeck"
+          }
         ]
       },
+
       "sections": {
         "layout": {
           "direction": "column",
+
           "content": [
             {
               "direction": "row",
               "content": [
-                { "section": "Leader", "style": { "width": "16%" } },
-                { "section": "Stack", "style": { "width": "20%" } },
-                { "section": "Remove", "style": { "width": "16%" } }
+                {
+                  "section": "Leader",
+                  "style": {
+                    "width": "16%"
+                  }
+                },
+                {
+                  "section": "Stack",
+                  "style": {
+                    "width": "20%"
+                  }
+                },
+                {
+                  "section": "Remove",
+                  "style": {
+                    "width": "16%"
+                  }
+                }
               ]
             },
+
             {
               "direction": "row",
               "isSymmetricalForOpponents": true,
+
               "content": [
-                { "section": "Monster1", "style": { "width": "25%" } },
-                { "section": "Monster2", "style": { "width": "25%" } },
-                { "section": "Monster3", "style": { "width": "25%" } },
-                { "section": "Monster4", "style": { "width": "25%" } }
+                {
+                  "section": "Monster1",
+                  "style": {
+                    "width": "25%"
+                  }
+                },
+                {
+                  "section": "Monster2",
+                  "style": {
+                    "width": "25%"
+                  }
+                },
+                {
+                  "section": "Monster3",
+                  "style": {
+                    "width": "25%"
+                  }
+                },
+                {
+                  "section": "Monster4",
+                  "style": {
+                    "width": "25%"
+                  }
+                }
               ]
             },
+
             {
               "direction": "row",
+
               "content": [
-                { "section": "Deck", "style": { "width": "16%" } },
-                { "section": "Discard", "style": { "width": "16%" } },
-                { "section": "ManaDeck", "style": { "width": "16%" } },
-                { "section": "ManaZone", "style": { "width": "52%" } }
+                {
+                  "section": "Deck",
+                  "style": {
+                    "width": "16%"
+                  }
+                },
+                {
+                  "section": "Discard",
+                  "style": {
+                    "width": "16%"
+                  }
+                },
+                {
+                  "section": "ManaDeck",
+                  "style": {
+                    "width": "16%"
+                  }
+                },
+                {
+                  "section": "ManaZone",
+                  "style": {
+                    "width": "52%"
+                  }
+                }
               ]
             },
-            { "section": "Hand" },
-            { "section": "TrinityControls" }
+
+            {
+              "section": "Hand"
+            },
+
+            {
+              "section": "TrinityControls"
+            }
           ]
         },
+
         "sectionsDict": {
           "Leader": {
             "isHidden": "no",
@@ -102,6 +202,7 @@
             "isHorizontalAllowed": true,
             "noAutoPayTo": true
           },
+
           "Monster1": {
             "isHidden": "no",
             "height": "MEDIUM",
@@ -110,6 +211,7 @@
             "isHorizontalAllowed": true,
             "logWhenPlayed": true
           },
+
           "Monster2": {
             "isHidden": "no",
             "height": "MEDIUM",
@@ -118,6 +220,7 @@
             "isHorizontalAllowed": true,
             "logWhenPlayed": true
           },
+
           "Monster3": {
             "isHidden": "no",
             "height": "MEDIUM",
@@ -126,6 +229,7 @@
             "isHorizontalAllowed": true,
             "logWhenPlayed": true
           },
+
           "Monster4": {
             "isHidden": "no",
             "height": "MEDIUM",
@@ -134,18 +238,21 @@
             "isHorizontalAllowed": true,
             "logWhenPlayed": true
           },
+
           "Deck": {
             "isHidden": "yes",
             "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Main Deck"
           },
+
           "Discard": {
             "isHidden": "no",
             "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Discard"
           },
+
           "Stack": {
             "isHidden": "no",
             "height": "SMALL",
@@ -153,31 +260,38 @@
             "displayedTitle": "Quick-Play / Spell Stack",
             "noAutoPayTo": true
           },
+
           "Remove": {
             "isHidden": "no",
             "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Removed / Leader Death"
           },
+
           "RemoveHidden": {
             "isHidden": "yes",
             "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Hidden Remove"
           },
+
           "Hand": {
             "isHidden": "opponent-only",
             "height": "SMALL",
             "alignment": "CENTER"
           },
+
           "ManaDeck": {
             "isHidden": "yes",
             "height": "SMALL",
             "alignment": "DECK",
             "displayedTitle": "Mana Deck",
-            "drawDestinations": { "_default": "ManaZone" },
+            "drawDestinations": {
+              "_default": "ManaZone"
+            },
             "noAutoPayTo": true
           },
+
           "ManaZone": {
             "isHidden": "no",
             "height": "SMALL",
@@ -187,18 +301,37 @@
             "noAutoPayTo": true,
             "keepTappedNewTurn": false
           },
+
           "TrinityControls": {
             "type": "custom",
-            "defaultValue": { "manaTurns": 0 },
+
+            "defaultValue": {
+              "manaTurns": 0
+            },
+
+            "events": {
+              "onNewTurn": "if (game.turn.isMyTurn) await trinityGainMana()"
+            },
+
             "blueprint": {
               "type": "div",
-              "props": { "style": { "display": "flex", "gap": "8px", "justifyContent": "center", "padding": "4px" } },
+
+              "props": {
+                "style": {
+                  "display": "flex",
+                  "gap": "8px",
+                  "justifyContent": "center",
+                  "padding": "4px"
+                }
+              },
+
               "children": [
                 {
                   "type": "button",
                   "children": "Gain 3 Mana",
                   "onClick": "await trinityGainMana()"
                 },
+
                 {
                   "type": "button",
                   "children": "Ready Mana",
@@ -208,10 +341,12 @@
             }
           }
         },
+
         "autoPlayFromHand": {
           "Quick-Play": "Stack",
           "Spell": "Stack"
         },
+
         "autoPlayFromStack": {
           "Quick-Play": "Discard",
           "Spell": "Discard"
@@ -219,14 +354,18 @@
       }
     }
   },
+
   "cards": {
     "dataUrl": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/cards.json",
+
     "cardBack": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/card-back.png",
+
     "extraCardBacks": {
       "Mana": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-back.png",
       "Leader": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-back.png"
     }
   },
+
   "scriptsUrls": [
     "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/trinity.js"
   ]
