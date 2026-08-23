@@ -2,7 +2,7 @@
   "name": "TRINITY Alpha 0.2",
   "cardRotation": 90,
 
-  "customHelp": "TRINITY Alpha 0.2\n\nCore prototype rules:\n- 20 Life.\n- 4 Monster Slots.\n- Monsters may be summoned upright (Attack Stance) or tapped sideways (Defense Stance).\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- Upright monsters defend with ATK; tapped monsters defend with DEF.\n- After a monster attacks, tap it.\n- To Break a monster, the attacker's ATK must exceed the target's current combat value (ATK if upright, DEF if tapped).\n- Put a BREAK marker on a Broken monster. Broken monsters do not protect Life; the next successful attack against that monster destroys it.\n- Quick-Play Spells may be used on either player's turn.\n- Regular Spells may only be used during their controller's turn.\n- Mana uses a separate 15-card Mana Deck containing generic Mana cards.\n- At the beginning of each of your turns, move 3 Mana from your Mana Deck to your Mana Zone, until all 15 have entered play.\n- Tap Mana to pay costs.\n- Burn: instead of tapping fresh Mana for an activated effect, you may return the same number of ALREADY-TAPPED Mana cards from your Mana Zone to the Mana Deck.\n- Burned Mana may be gained again on later turns.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.",
+  "customHelp": "TRINITY Alpha 0.2\n\nCore prototype rules:\n- 20 Life.\n- 4 Monster Slots.\n- Monsters may be summoned upright (Attack Stance) or tapped sideways (Defense Stance).\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- Upright monsters defend with ATK; tapped monsters defend with DEF.\n- After a monster attacks, tap it.\n- To Break a monster, the attacker's ATK must exceed the target's current combat value (ATK if upright, DEF if tapped).\n- Put a BREAK marker on a Broken monster. Broken monsters do not protect Life; the next successful attack against that monster destroys it.\n- Quick-Play Spells may be used on either player's turn.\n- Regular Spells may only be used during their controller's turn.\n- Mana uses a separate 15-card Mana Deck containing generic Mana cards.\n- At the beginning of each of your turns, move 3 Mana from your Mana Deck to your Mana Zone, until all 15 have entered play.\n- Tap Mana to pay costs.\n- Burn: instead of tapping fresh Mana for an activated effect, you may return the same number of ALREADY-TAPPED Mana cards from your Mana Zone to the Mana Deck.\n- Burned Mana may be gained again on later turns.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.\n- Destroyed and discarded cards are placed in the Graveyard.",
 
   "deckBuilding": {
     "mainFilters": [
@@ -135,28 +135,28 @@
                 {
                   "section": "Leader",
                   "style": {
-                    "width": "22%"
+                    "width": "20%"
                   }
                 },
 
                 {
                   "section": "Remove",
                   "style": {
-                    "width": "22%"
-                  }
-                },
-
-                {
-                  "section": "Discard",
-                  "style": {
-                    "width": "22%"
+                    "width": "20%"
                   }
                 },
 
                 {
                   "section": "Deck",
                   "style": {
-                    "width": "22%"
+                    "width": "20%"
+                  }
+                },
+
+                {
+                  "section": "Discard",
+                  "style": {
+                    "width": "20%"
                   }
                 }
               ]
@@ -282,16 +282,22 @@
 
           "Deck": {
             "isHidden": "yes",
-            "height": 5,
+            "height": 6,
             "alignment": "DECK",
-            "displayedTitle": ""
+            "displayedTitle": "Main Deck",
+            "noQuickActions": false
           },
 
           "Discard": {
             "isHidden": "no",
-            "height": 5,
+            "height": 6,
             "alignment": "DECK",
-            "displayedTitle": ""
+            "displayedTitle": "Graveyard",
+            "isHorizontalAllowed": false,
+            "noAutoPayTo": true,
+            "noQuickActions": false,
+            "isGroupForbidden": false,
+            "logWhenPlayed": true
           },
 
           "Stack": {
@@ -308,7 +314,7 @@
             "isHidden": "no",
             "height": 5,
             "alignment": "DECK",
-            "displayedTitle": ""
+            "displayedTitle": "Removed"
           },
 
           "RemoveHidden": {
