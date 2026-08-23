@@ -1,148 +1,157 @@
 {
-  "leader_aquaria": {
-    "id": "leader_aquaria",
-    "face": { "front": { "name": { "name": "Aquaria, Tideborn Prodigy" }, "type": "Leader", "cost": 9, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-aquaria.png" } },
-    "name": "Aquaria, Tideborn Prodigy",
+  "afterimage_shiro": {
+    "id": "afterimage_shiro",
+    "face": {
+      "front": {
+        "name": { "name": "Shiro — The Man Between Frames" },
+        "type": "Leader",
+        "cost": 9,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-shiro.png"
+      }
+    },
+    "name": "Shiro — The Man Between Frames",
     "type": "Leader",
     "cost": 9,
-    "element": ["Water", "Void"],
-    "archetype": "Tideborn",
-    "atk": 2800,
-    "def": 2400,
-    "weakness": "Volt",
-    "rules": "Leader. Manifest 9. Permanent death if destroyed after Manifesting."
-  },
-  "aquaria": {
-    "id": "aquaria",
-    "face": { "front": { "name": { "name": "Aquaria, Water Sorceress" }, "type": "Monster", "cost": 5, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/aquaria.png" } },
-    "name": "Aquaria, Water Sorceress",
-    "type": "Monster",
-    "cost": 5,
-    "element": "Water",
-    "archetype": "Tideborn",
-    "atk": 2400,
-    "def": 1800,
-    "weakness": "Volt",
-    "effectCost": 3,
-    "rules": "Tidal Pull — Activate 3: target monster gets -800 to its current combat value this battle. If it is Weak to WATER, -1200 instead. Pay by tapping 3 ready Mana OR Burn 3 already-tapped Mana."
-  },
-  "mizu": {
-    "id": "mizu",
-    "face": { "front": { "name": { "name": "Mizu, Tideborn Familiar" }, "type": "Monster", "cost": 2, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mizu.png" } },
-    "name": "Mizu, Tideborn Familiar",
-    "type": "Monster",
-    "cost": 2,
-    "element": "Water",
-    "archetype": "Tideborn",
-    "atk": 800,
-    "def": 800,
-    "weakness": "Volt",
-    "rules": "Playful Current — When summoned, you may change this monster's stance."
-  },
-  "kira": {
-    "id": "kira",
-    "face": { "front": { "name": { "name": "Volt Hunter Kira" }, "type": "Monster", "cost": 4, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/kira.png" } },
-    "name": "Volt Hunter Kira",
-    "type": "Monster",
-    "cost": 4,
-    "element": "Volt",
-    "archetype": "Hunter",
-    "atk": 2000,
-    "def": 1200,
-    "weakness": "Earth",
-    "rules": "Exploit — When Kira Breaks a monster through its Weakness, ready Kira once per turn."
-  },
-  "iron_golem": {
-    "id": "iron_golem",
-    "face": { "front": { "name": { "name": "Iron Golem" }, "type": "Monster", "cost": 5, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/iron-golem.png" } },
-    "name": "Iron Golem",
-    "type": "Monster",
-    "cost": 5,
-    "element": "Earth",
-    "archetype": "Sentinel",
-    "atk": 1500,
-    "def": 3500,
-    "weakness": "Water",
-    "rules": "Stonewall — This monster's DEF cannot be reduced below 2500."
-  },
-  "glass_assassin": {
-    "id": "glass_assassin",
-    "face": { "front": { "name": { "name": "Glass Assassin" }, "type": "Monster", "cost": 4, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/glass-assassin.png" } },
-    "name": "Glass Assassin",
-    "type": "Monster",
-    "cost": 4,
-    "element": "Void",
-    "archetype": "Assassin",
-    "atk": 3100,
-    "def": 900,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "atk": 3200,
+    "def": 2800,
     "weakness": "Light",
-    "rules": "Fragile Edge — Gains +500 ATK during your turn."
+    "rules": "Between Frames — Once per turn, after one of your Afterimage monsters changes stance, you may Shift that monster. Manifest — 9 Mana: Place Shiro into an empty Monster Slot in Attack Stance. Leader Permadeath: if Shiro is destroyed after Manifesting, he is permanently removed from the game. Empty Frame — When Shiro Manifests, choose one Afterimage monster you control. Shift it up to two slots, then change its stance. Frame Zero — Activate 5: Once per turn, choose one Afterimage monster you control. Change its stance. Then it may immediately attack an opposing monster. If that attack Breaks the target, Shift the attacking monster after the battle."
   },
-  "flash_current": {
-    "id": "flash_current",
-    "face": { "front": { "name": { "name": "Flash Current" }, "type": "Quick-Play", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/flash-current.png" } },
-    "name": "Flash Current",
+
+  "afterimage_kage": {
+    "id": "afterimage_kage",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Kage, Crossing Blade" },
+        "type": "Monster",
+        "cost": 4,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-kage.png"
+      }
+    },
+    "name": "Afterimage — Kage, Crossing Blade",
+    "type": "Monster",
+    "cost": 4,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "atk": 2400,
+    "def": 1500,
+    "weakness": "Light",
+    "effectCost": 2,
+    "rules": "Vanishing Step — Once per turn, after this monster changes from Attack Stance to Defense Stance, you may Shift it. If you do, choose one opposing monster adjacent to its new slot. It gets -500 to its current combat value until end of turn. Phantom Cut — Activate 2: Change Kage from Defense Stance to Attack Stance. If you do, Kage may attack a monster this turn even if he has already attacked. He cannot attack Life again this turn."
+  },
+
+  "afterimage_mika": {
+    "id": "afterimage_mika",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Mika, Paper Witch" },
+        "type": "Monster",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-mika.png"
+      }
+    },
+    "name": "Afterimage — Mika, Paper Witch",
+    "type": "Monster",
+    "cost": 3,
+    "element": "Spirit",
+    "archetype": "Afterimage",
+    "atk": 1300,
+    "def": 2600,
+    "weakness": "Fire",
+    "effectCost": 2,
+    "rules": "Paper Barrier — While this monster is in Defense Stance, adjacent Afterimage monsters gain +400 DEF. Fold the Seal — Activate 2: Choose another Afterimage monster you control. Change it to Defense Stance. If that monster was already in Defense Stance, instead give it +500 DEF until end of turn. Once per turn."
+  },
+
+  "afterimage_rin": {
+    "id": "afterimage_rin",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Rin, Headless Rider" },
+        "type": "Monster",
+        "cost": 6,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-rin.png"
+      }
+    },
+    "name": "Afterimage — Rin, Headless Rider",
+    "type": "Monster",
+    "cost": 6,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "atk": 3100,
+    "def": 2200,
+    "weakness": "Light",
+    "rules": "Headlong — When this monster attacks an opposing monster, it gains +400 ATK for that battle if that monster is in Defense Stance. Momentum — Once per turn, when this monster Breaks an opposing monster, ready this monster into Attack Stance. It may attack again this turn, but its next attack cannot target Life."
+  },
+
+  "afterimage_dont_look_back": {
+    "id": "afterimage_dont_look_back",
+    "face": {
+      "front": {
+        "name": { "name": "Don't Look Back" },
+        "type": "Quick-Play",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-dont-look-back.png"
+      }
+    },
+    "name": "Don't Look Back",
     "type": "Quick-Play",
     "cost": 3,
-    "element": "Water",
-    "archetype": "Tideborn",
-    "rules": "Activate during either player's turn. Target monster gets +700 ATK or +700 DEF until the end of the current battle."
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "rules": "Activate during either player's turn when an Afterimage monster you control becomes the target of an attack. Change that monster's stance. The battle then uses its new current combat value. After the battle, if that monster was not Broken, Shift it. Pay the cost by tapping 3 ready Mana, or Burn 3 already-tapped Mana by returning them to the Mana Deck."
   },
-  "dodge": {
-    "id": "dodge",
-    "face": { "front": { "name": { "name": "Dodge!" }, "type": "Quick-Play", "cost": 2, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/dodge.png" } },
-    "name": "Dodge!",
+
+  "afterimage_death_has_bad_timing": {
+    "id": "afterimage_death_has_bad_timing",
+    "face": {
+      "front": {
+        "name": { "name": "Death Has Bad Timing" },
+        "type": "Quick-Play",
+        "cost": 4,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-death-has-bad-timing.png"
+      }
+    },
+    "name": "Death Has Bad Timing",
     "type": "Quick-Play",
-    "cost": 2,
-    "element": "Neutral",
-    "archetype": "Generic",
-    "rules": "Activate during either player's turn. Change one target monster from Attack Stance to Defense Stance before combat comparison."
+    "cost": 4,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "rules": "Activate during either player's turn when an Afterimage monster you control would be Broken by an attack. Change that monster's stance, then recalculate the battle using its new current combat value. If the attacking monster no longer exceeds that value, prevent the Break. Then tap the attacking monster if it is not already tapped. Pay the cost by tapping 4 ready Mana, or Burn 4 already-tapped Mana by returning them to the Mana Deck."
   },
-  "tidal_reversal": {
-    "id": "tidal_reversal",
-    "face": { "front": { "name": { "name": "Tidal Reversal" }, "type": "Quick-Play", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/tidal-reversal.png" } },
-    "name": "Tidal Reversal",
-    "type": "Quick-Play",
-    "cost": 3,
-    "element": "Water",
-    "archetype": "Tideborn",
-    "rules": "When a monster declares an attack, if its ATK is less than or equal to the target's current combat value, return the attacker to its owner's hand."
-  },
-  "soaked_ground": {
-    "id": "soaked_ground",
-    "face": { "front": { "name": { "name": "Soaked Ground" }, "type": "Spell", "cost": 3, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/soaked-ground.png" } },
-    "name": "Soaked Ground",
-    "type": "Spell",
-    "cost": 3,
-    "element": "Water",
-    "archetype": "Generic",
-    "rules": "Choose one enemy monster. Until end of your next turn, it gains Weakness: VOLT."
-  },
-  "mana_water": {
-    "id": "mana_water",
-    "face": { "front": { "name": { "name": "Water Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-water.png" } },
-    "name": "Water Mana",
+
+  "mana_shadow": {
+    "id": "mana_shadow",
+    "face": {
+      "front": {
+        "name": { "name": "Shadow Mana" },
+        "type": "Mana",
+        "cost": 0,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-shadow.png"
+      }
+    },
+    "name": "Shadow Mana",
     "type": "Mana",
     "cost": 0,
-    "element": "Water",
+    "element": "Shadow",
     "archetype": "Mana"
   },
-  "mana_void": {
-    "id": "mana_void",
-    "face": { "front": { "name": { "name": "Void Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-void.png" } },
-    "name": "Void Mana",
+
+  "mana_spirit": {
+    "id": "mana_spirit",
+    "face": {
+      "front": {
+        "name": { "name": "Spirit Mana" },
+        "type": "Mana",
+        "cost": 0,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-spirit.png"
+      }
+    },
+    "name": "Spirit Mana",
     "type": "Mana",
     "cost": 0,
-    "element": "Void",
-    "archetype": "Mana"
-  },
-  "mana_volt": {
-    "id": "mana_volt",
-    "face": { "front": { "name": { "name": "Volt Mana" }, "type": "Mana", "cost": 0, "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-volt.png" } },
-    "name": "Volt Mana",
-    "type": "Mana",
-    "cost": 0,
-    "element": "Volt",
+    "element": "Spirit",
     "archetype": "Mana"
   }
 }
