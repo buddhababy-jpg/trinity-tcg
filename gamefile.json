@@ -106,7 +106,7 @@
         ],
 
         "sharedZone": {
-          "height": 12,
+          "height": 9,
 
           "layout": {
             "direction": "column",
@@ -128,7 +128,6 @@
           "content": [
             {
               "direction": "row",
-
               "isSymmetricalForOpponents": true,
 
               "content": [
@@ -164,7 +163,6 @@
 
             {
               "direction": "row",
-
               "isSymmetricalForOpponents": true,
 
               "content": [
@@ -199,8 +197,14 @@
             },
 
             {
-              "direction": "row",
+              "section": "Hand",
+              "style": {
+                "width": "100%"
+              }
+            },
 
+            {
+              "direction": "row",
               "isSymmetricalForOpponents": true,
 
               "content": [
@@ -225,13 +229,6 @@
                   }
                 }
               ]
-            },
-
-            {
-              "section": "Hand",
-              "style": {
-                "width": "100%"
-              }
             }
           ]
         },
@@ -239,7 +236,7 @@
         "sectionsDict": {
           "Leader": {
             "isHidden": "no",
-            "height": 8,
+            "height": 6,
             "alignment": "CENTER",
             "displayedTitle": "Leader",
             "isHorizontalAllowed": true,
@@ -248,7 +245,7 @@
 
           "Monster1": {
             "isHidden": "no",
-            "height": 14,
+            "height": 12,
             "alignment": "CENTER",
             "displayedTitle": "Monster 1",
             "isHorizontalAllowed": true,
@@ -257,7 +254,7 @@
 
           "Monster2": {
             "isHidden": "no",
-            "height": 14,
+            "height": 12,
             "alignment": "CENTER",
             "displayedTitle": "Monster 2",
             "isHorizontalAllowed": true,
@@ -266,7 +263,7 @@
 
           "Monster3": {
             "isHidden": "no",
-            "height": 14,
+            "height": 12,
             "alignment": "CENTER",
             "displayedTitle": "Monster 3",
             "isHorizontalAllowed": true,
@@ -275,7 +272,7 @@
 
           "Monster4": {
             "isHidden": "no",
-            "height": 14,
+            "height": 12,
             "alignment": "CENTER",
             "displayedTitle": "Monster 4",
             "isHorizontalAllowed": true,
@@ -284,21 +281,21 @@
 
           "Deck": {
             "isHidden": "yes",
-            "height": 8,
+            "height": 6,
             "alignment": "DECK",
             "displayedTitle": "Main Deck"
           },
 
           "Discard": {
             "isHidden": "no",
-            "height": 8,
+            "height": 6,
             "alignment": "DECK",
             "displayedTitle": "Discard"
           },
 
           "Stack": {
             "isHidden": "no",
-            "height": 10,
+            "height": 8,
             "alignment": "CENTER",
             "displayedTitle": "Quick-Play / Spell Stack",
             "isHorizontalAllowed": false,
@@ -308,29 +305,30 @@
 
           "Remove": {
             "isHidden": "no",
-            "height": 8,
+            "height": 6,
             "alignment": "DECK",
             "displayedTitle": "Removed / Leader Death"
           },
 
           "RemoveHidden": {
             "isHidden": "yes",
-            "height": 8,
+            "height": 6,
             "alignment": "DECK",
             "displayedTitle": "Hidden Remove"
           },
 
           "Hand": {
             "isHidden": "opponent-only",
-            "height": 15,
+            "height": 20,
             "alignment": "CENTER",
             "displayedTitle": "Hand",
-            "isHorizontalAllowed": false
+            "isHorizontalAllowed": false,
+            "noAutoPayTo": true
           },
 
           "ManaDeck": {
             "isHidden": "yes",
-            "height": 9,
+            "height": 7,
             "alignment": "DECK",
             "displayedTitle": "Mana Deck",
 
@@ -343,7 +341,7 @@
 
           "ManaZone": {
             "isHidden": "no",
-            "height": 9,
+            "height": 7,
             "alignment": "CENTER",
             "displayedTitle": "Mana Zone",
             "isHorizontalAllowed": true,
