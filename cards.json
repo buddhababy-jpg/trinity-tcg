@@ -239,6 +239,42 @@
     "rules": "When your opponent activates a monster's activated effect: You may reveal this card from your hand. Tap 2 Mana. Increase that effect's activation cost by 2 Mana. Your opponent may pay the additional cost. If they do not, that effect ends. Then discard this card."
   },
 
+  "youre_not_getting_away_that_easy": {
+    "id": "youre_not_getting_away_that_easy",
+    "face": {
+      "front": {
+        "name": { "name": "You're Not Getting Away That Easy" },
+        "type": "Spell",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/youre-not-getting-away-that-easy.png"
+      }
+    },
+    "name": "You're Not Getting Away That Easy",
+    "type": "Spell",
+    "cost": 3,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "rules": "Choose one monster in either player's Discard with cost 4 or less. Return it to its owner's hand. If that monster was Broken before being destroyed, its owner draws 1 card, then discards 1 card."
+  },
+
+  "wrong_place_wrong_time": {
+    "id": "wrong_place_wrong_time",
+    "face": {
+      "front": {
+        "name": { "name": "Wrong Place, Wrong Time" },
+        "type": "Spell",
+        "cost": 4,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/wrong-place-wrong-time.png"
+      }
+    },
+    "name": "Wrong Place, Wrong Time",
+    "type": "Spell",
+    "cost": 4,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "rules": "Choose one opposing monster. Move it to another empty Monster Slot. Then choose one: Change its stance; or it gets -700 to its current combat value until end of turn. A monster moved by this effect cannot attack Life this turn."
+  },
+
   "mana": {
     "id": "mana",
     "face": {
