@@ -2,7 +2,7 @@ async function trinityGainMana() {
   const manaZone = cards.ManaZone ?? [];
   const manaDeck = cards.ManaDeck ?? [];
 
-  // Hard limit: never have more than 15 Mana in the Mana Zone.
+  // TRINITY maximum Mana Zone size is 15.
   const availableSpace = Math.max(0, 15 - manaZone.length);
 
   if (availableSpace <= 0) {
@@ -15,9 +15,13 @@ async function trinityGainMana() {
     return;
   }
 
-  // Gain up to 3, but never exceed the Mana Zone cap
-  // or the number of cards remaining in ManaDeck.
-  const amount = Math.min(3, availableSpace, manaDeck.length);
+  // Gain up to 3 Mana.
+  // Never exceed 15 total Mana or the number remaining in the Mana Deck.
+  const amount = Math.min(
+    3,
+    availableSpace,
+    manaDeck.length
+  );
 
   await functions.drawFromExtraDeck(
     "ManaDeck",
@@ -26,28 +30,11 @@ async function trinityGainMana() {
     "ManaZone"
   );
 
-  game.data.TrinityControls.manaTurns += 1;
-
   functions.chatLog(
-    "Gained " + amount + " Mana. Mana Zone: " +
-    (manaZone.length + amount) + "/15."
+    "Gained " +
+      amount +
+      " Mana. Mana Zone: " +
+      (manaZone.length + amount) +
+      "/15."
   );
-}
-
-
-async function trinityReadyMana() {
-  const mana = cards.ManaZone ?? [];
-
-  if (mana.length <= 0) {
-    return;
-  }
-
-  await functions.updateCards(
-    mana,
-    {
-      isTapped: false
-    }
-  );
-
-  functions.chatLog("Mana readied.");
 }
