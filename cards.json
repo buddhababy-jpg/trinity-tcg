@@ -275,6 +275,28 @@
     "rules": "Choose one opposing monster. Move it to another empty Monster Slot. Then choose one: Change its stance; or it gets -700 to its current combat value until end of turn. A monster moved by this effect cannot attack Life this turn."
   },
 
+  "afterimage_noa": {
+    "id": "afterimage_noa",
+    "face": {
+      "front": {
+        "name": { "name": "Afterimage — Noa, Blade in the Dead Angle" },
+        "type": "Monster",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-noa.png"
+      }
+    },
+    "name": "Afterimage — Noa, Blade in the Dead Angle",
+    "type": "Monster",
+    "cost": 3,
+    "element": "Shadow",
+    "archetype": "Afterimage",
+    "atk": 1800,
+    "def": 1800,
+    "weakness": "Light",
+    "effectCost": 2,
+    "rules": "A Thousand Angles — Activate 2: Once per turn, choose one: Feint — Change Noa's stance. Then choose one opposing monster and change its stance. Intercept — Until the beginning of your next turn, Noa gains +600 DEF. The next time an adjacent Afterimage monster would be attacked, you may make Noa the attack target instead. Opening — Noa gains +600 ATK until end of turn. If she attacks a monster this turn, that monster cannot change its stance during that battle. Never the Same Angle Twice — You cannot choose the same A Thousand Angles option on consecutive turns."
+  },
+
   "mana": {
     "id": "mana",
     "face": {
