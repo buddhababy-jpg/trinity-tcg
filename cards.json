@@ -3,7 +3,9 @@
     "id": "afterimage_shiro",
     "face": {
       "front": {
-        "name": { "name": "Shiro — The Man Between Frames" },
+        "name": {
+          "name": "Shiro — The Man Between Frames"
+        },
         "type": "Leader",
         "cost": 9,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-shiro.png"
@@ -19,12 +21,13 @@
     "weakness": "Light",
     "rules": "Between Frames — Once per turn, after one of your Afterimage monsters changes stance, you may Shift that monster. Manifest — 9 Mana: Place Shiro into an empty Monster Slot in Attack Stance. Leader Permadeath: if Shiro is destroyed after Manifesting, he is permanently removed from the game. Empty Frame — When Shiro Manifests, choose one Afterimage monster you control. Shift it up to two slots, then change its stance. Frame Zero — Activate 5: Once per turn, choose one Afterimage monster you control. Change its stance. Then it may immediately attack an opposing monster. If that attack Breaks the target, Shift the attacking monster after the battle."
   },
-
   "afterimage_kage": {
     "id": "afterimage_kage",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Kage, Crossing Blade" },
+        "name": {
+          "name": "Afterimage — Kage, Crossing Blade"
+        },
         "type": "Monster",
         "cost": 4,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-kage.png"
@@ -41,12 +44,13 @@
     "effectCost": 2,
     "rules": "Vanishing Step — Once per turn, after this monster changes from Attack Stance to Defense Stance, you may Shift it. If you do, choose one opposing monster adjacent to its new slot. It gets -500 to its current combat value until end of turn. Phantom Cut — Activate 2: Change Kage from Defense Stance to Attack Stance. If you do, Kage may attack a monster this turn even if he has already attacked. He cannot attack Life again this turn."
   },
-
   "afterimage_mika": {
     "id": "afterimage_mika",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Mika, Paper Witch" },
+        "name": {
+          "name": "Afterimage — Mika, Paper Witch"
+        },
         "type": "Monster",
         "cost": 3,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-mika.png"
@@ -63,12 +67,13 @@
     "effectCost": 2,
     "rules": "Paper Barrier — While this monster is in Defense Stance, adjacent Afterimage monsters gain +400 DEF. Fold the Seal — Activate 2: Choose another Afterimage monster you control. Change it to Defense Stance. If that monster was already in Defense Stance, instead give it +500 DEF until end of turn. Once per turn."
   },
-
   "afterimage_rin": {
     "id": "afterimage_rin",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Rin, Headless Rider" },
+        "name": {
+          "name": "Afterimage — Rin, Headless Rider"
+        },
         "type": "Monster",
         "cost": 6,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-rin.png"
@@ -84,12 +89,13 @@
     "weakness": "Light",
     "rules": "Headlong — When this monster attacks an opposing monster, it gains +400 ATK for that battle if that monster is in Defense Stance. Momentum — Once per turn, when this monster Breaks an opposing monster, ready this monster into Attack Stance. It may attack again this turn, but its next attack cannot target Life."
   },
-
   "afterimage_dont_look_back": {
     "id": "afterimage_dont_look_back",
     "face": {
       "front": {
-        "name": { "name": "Don't Look Back" },
+        "name": {
+          "name": "Don't Look Back"
+        },
         "type": "Quick-Play",
         "cost": 3,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-dont-look-back.png"
@@ -102,12 +108,13 @@
     "archetype": "Afterimage",
     "rules": "Activate during either player's turn when an Afterimage monster you control becomes the target of an attack. Change that monster's stance. The battle then uses its new current combat value. After the battle, if that monster was not Broken, Shift it. Pay the cost by tapping 3 ready Mana, or Burn 3 already-tapped Mana by returning them to the Mana Deck."
   },
-
   "afterimage_death_has_bad_timing": {
     "id": "afterimage_death_has_bad_timing",
     "face": {
       "front": {
-        "name": { "name": "Death Has Bad Timing" },
+        "name": {
+          "name": "Death Has Bad Timing"
+        },
         "type": "Quick-Play",
         "cost": 4,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-death-has-bad-timing.png"
@@ -120,12 +127,13 @@
     "archetype": "Afterimage",
     "rules": "Activate during either player's turn when an Afterimage monster you control would be Broken by an attack. Change that monster's stance, then recalculate the battle using its new current combat value. If the attacking monster no longer exceeds that value, prevent the Break. Then tap the attacking monster if it is not already tapped. Pay the cost by tapping 4 ready Mana, or Burn 4 already-tapped Mana by returning them to the Mana Deck."
   },
-
   "afterimage_yurei": {
     "id": "afterimage_yurei",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Yurei, Lantern Keeper" },
+        "name": {
+          "name": "Afterimage — Yurei, Lantern Keeper"
+        },
         "type": "Monster",
         "cost": 2,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-yurei.png"
@@ -142,12 +150,13 @@
     "effectCost": 2,
     "rules": "Lingering Light — Once per turn, after another Afterimage monster you control Shifts, you may change Yurei's stance. Follow the Lantern — Activate 2: Choose another Afterimage monster you control. Shift it one slot. If it moved adjacent to Yurei, it gets +300 to its current combat value until end of turn."
   },
-
   "afterimage_sora": {
     "id": "afterimage_sora",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Sora, Severed Thread" },
+        "name": {
+          "name": "Afterimage — Sora, Severed Thread"
+        },
         "type": "Monster",
         "cost": 5,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-sora.png"
@@ -164,12 +173,13 @@
     "effectCost": 3,
     "rules": "Wrong Place — Once per turn, after Sora Shifts, choose one opposing monster adjacent to his new slot. That monster gets -400 to its current combat value until end of turn. Severed Thread — Activate 3: Change Sora's stance. Then Shift him one slot. If he becomes adjacent to an opposing monster he was not adjacent to before, he gets +500 ATK until end of turn."
   },
-
   "afterimage_the_space_between_footsteps": {
     "id": "afterimage_the_space_between_footsteps",
     "face": {
       "front": {
-        "name": { "name": "The Space Between Footsteps" },
+        "name": {
+          "name": "The Space Between Footsteps"
+        },
         "type": "Spell",
         "cost": 4,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-the-space-between-footsteps.png"
@@ -182,12 +192,13 @@
     "archetype": "Afterimage",
     "rules": "Choose up to three Afterimage monsters you control. You may Shift each chosen monster once, in any order. Then you may change the stance of one of those monsters. Monsters moved by this effect cannot attack Life this turn."
   },
-
   "afterimage_everyone_remembers_you_wrong": {
     "id": "afterimage_everyone_remembers_you_wrong",
     "face": {
       "front": {
-        "name": { "name": "Everyone Remembers You Wrong" },
+        "name": {
+          "name": "Everyone Remembers You Wrong"
+        },
         "type": "Spell",
         "cost": 5,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-everyone-remembers-you-wrong.png"
@@ -200,12 +211,13 @@
     "archetype": "Afterimage",
     "rules": "Choose one Afterimage monster in your Discard with cost 4 or less. Place it into an empty Monster Slot in Defense Stance. It cannot change to Attack Stance this turn. At the end of your next turn, if that monster is still on the field, return it to your hand."
   },
-
   "not_so_fast": {
     "id": "not_so_fast",
     "face": {
       "front": {
-        "name": { "name": "Not So Fast." },
+        "name": {
+          "name": "Not So Fast."
+        },
         "type": "Hand Trap",
         "cost": 0,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/not-so-fast.png"
@@ -219,12 +231,13 @@
     "effectCost": 2,
     "rules": "When an opposing monster declares an attack: You may reveal this card from your hand. Tap 2 Mana. Change the attacking monster to Defense Stance. The attack ends. Then discard this card."
   },
-
   "i_saw_that_coming": {
     "id": "i_saw_that_coming",
     "face": {
       "front": {
-        "name": { "name": "I Saw That Coming." },
+        "name": {
+          "name": "I Saw That Coming."
+        },
         "type": "Hand Trap",
         "cost": 0,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/i-saw-that-coming.png"
@@ -238,12 +251,13 @@
     "effectCost": 2,
     "rules": "When your opponent activates a monster's activated effect: You may reveal this card from your hand. Tap 2 Mana. Increase that effect's activation cost by 2 Mana. Your opponent may pay the additional cost. If they do not, that effect ends. Then discard this card."
   },
-
   "youre_not_getting_away_that_easy": {
     "id": "youre_not_getting_away_that_easy",
     "face": {
       "front": {
-        "name": { "name": "You're Not Getting Away That Easy" },
+        "name": {
+          "name": "You're Not Getting Away That Easy"
+        },
         "type": "Spell",
         "cost": 3,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/youre-not-getting-away-that-easy.png"
@@ -256,12 +270,13 @@
     "archetype": "Generic",
     "rules": "Choose one monster in either player's Discard with cost 4 or less. Return it to its owner's hand. If that monster was Broken before being destroyed, its owner draws 1 card, then discards 1 card."
   },
-
   "wrong_place_wrong_time": {
     "id": "wrong_place_wrong_time",
     "face": {
       "front": {
-        "name": { "name": "Wrong Place, Wrong Time" },
+        "name": {
+          "name": "Wrong Place, Wrong Time"
+        },
         "type": "Spell",
         "cost": 4,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/wrong-place-wrong-time.png"
@@ -274,12 +289,13 @@
     "archetype": "Generic",
     "rules": "Choose one opposing monster. Move it to another empty Monster Slot. Then choose one: Change its stance; or it gets -700 to its current combat value until end of turn. A monster moved by this effect cannot attack Life this turn."
   },
-
   "afterimage_noa": {
     "id": "afterimage_noa",
     "face": {
       "front": {
-        "name": { "name": "Afterimage — Noa, Blade in the Dead Angle" },
+        "name": {
+          "name": "Afterimage — Noa, Blade in the Dead Angle"
+        },
         "type": "Monster",
         "cost": 3,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/afterimage-noa.png"
@@ -296,12 +312,140 @@
     "effectCost": 2,
     "rules": "A Thousand Angles — Activate 2: Once per turn, choose one: Feint — Change Noa's stance. Then choose one opposing monster and change its stance. Intercept — Until the beginning of your next turn, Noa gains +600 DEF. The next time an adjacent Afterimage monster would be attacked, you may make Noa the attack target instead. Opening — Noa gains +600 ATK until end of turn. If she attacks a monster this turn, that monster cannot change its stance during that battle. Never the Same Angle Twice — You cannot choose the same A Thousand Angles option on consecutive turns."
   },
-
+  "legendary_veil_of_nullification": {
+    "id": "legendary_veil_of_nullification",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Veil of Nullification"
+        },
+        "type": "Legendary Equip",
+        "cost": 5,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/legendary-veil-of-nullification.png"
+      }
+    },
+    "name": "Veil of Nullification",
+    "type": "Legendary Equip",
+    "cost": 5,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "legendary": true,
+    "legendaryType": "Equip",
+    "rules": "Attach this card to one opposing monster. While equipped, that monster's effects are negated and its ATK and DEF become 0. Price of the Veil — At the start of the equipped monster's controller's turn, that player gains 1 Life."
+  },
+  "legendary_the_last_turn_was_a_lie": {
+    "id": "legendary_the_last_turn_was_a_lie",
+    "face": {
+      "front": {
+        "name": {
+          "name": "The Last Turn Was a Lie"
+        },
+        "type": "Legendary Spell",
+        "cost": 8,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/legendary-the-last-turn-was-a-lie.png"
+      }
+    },
+    "name": "The Last Turn Was a Lie",
+    "type": "Legendary Spell",
+    "speed": "Quick-Play",
+    "cost": 8,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "legendary": true,
+    "legendaryType": "Spell",
+    "rules": "Rewrite Reality — Return all Mana you Burned before activating this card this turn to your Mana Zone ready. Second Chance — Ready all monsters you control. Remove BREAK from all monsters you control. But Wait—There's a Catch — You cannot attack Life this turn."
+  },
+  "legendary_the_king_at_the_end": {
+    "id": "legendary_the_king_at_the_end",
+    "face": {
+      "front": {
+        "name": {
+          "name": "The King at the End"
+        },
+        "type": "Legendary Monster",
+        "cost": 10,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/legendary-the-king-at-the-end.png"
+      }
+    },
+    "name": "The King at the End",
+    "type": "Legendary Monster",
+    "cost": 10,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "atk": 3000,
+    "def": 3000,
+    "legendary": true,
+    "legendaryType": "Monster",
+    "rules": "Three Crowns — When this monster enters play, choose 3 different Crowns. Crown of Ruin — This monster can attack twice each turn. Crown of Dominion — Once per turn, negate the effect of one opposing monster until the beginning of your next turn. Crown of Ash — When this monster destroys an Attack Stance monster, you may immediately attack another monster. Crown of Eternity — The first time this monster would be destroyed each turn, it is not destroyed. Instead, place BREAK on it. Crown of Hunger — Whenever your opponent Burns Mana, ready 1 of your Mana. Crown of Judgment — When this monster attacks a monster with BREAK, destroy that monster before battle and continue the attack against Life. The Final Crown — While you have 3 Life or less, this monster has all six Crowns. Royal Presence — This monster cannot be targeted by non-Legendary effects, and its ATK and DEF cannot be reduced."
+  },
+  "double_edged_katana": {
+    "id": "double_edged_katana",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Double Edged Katana"
+        },
+        "type": "Equip",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/double-edged-katana.png"
+      }
+    },
+    "name": "Double Edged Katana",
+    "type": "Equip",
+    "cost": 3,
+    "element": "Neutral",
+    "archetype": "Generic",
+    "rules": "Equip this card to a monster. Reckless Ascent — The equipped monster gets +1000 ATK and -1000 DEF. All or Nothing — When the equipped monster destroys an opposing monster by battle, draw 1 card. If the equipped monster is destroyed by battle, discard 1 card. Returning Edge — When this card is sent to the Graveyard, you may Burn 3 Mana to add it to your hand."
+  },
+  "crowd_control": {
+    "id": "crowd_control",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Crowd Control"
+        },
+        "type": "Monster",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/crowd-control.png"
+      }
+    },
+    "name": "Crowd Control",
+    "type": "Monster",
+    "cost": 3,
+    "element": "Spirit",
+    "archetype": "Generic",
+    "atk": 1700,
+    "def": 1900,
+    "rules": "Push & Pull — When this monster enters play, choose up to one adjacent monster and up to one non-adjacent monster. The adjacent monster gets -500 to its current combat value until end of turn. The non-adjacent monster gets +500 to its current combat value until end of turn."
+  },
+  "a_divine_wind": {
+    "id": "a_divine_wind",
+    "face": {
+      "front": {
+        "name": {
+          "name": "A Divine Wind"
+        },
+        "type": "Monster",
+        "cost": 9,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/a-divine-wind.png"
+      }
+    },
+    "name": "A Divine Wind",
+    "type": "Monster",
+    "cost": 9,
+    "element": "Spirit",
+    "archetype": "Generic",
+    "atk": 2900,
+    "def": 2500,
+    "rules": "Heaven's Gust — When this monster enters play, all opposing monsters get -500 to their current combat value until end of turn. This monster may attack each opposing monster once this turn. During the End Phase, destroy this card."
+  },
   "mana": {
     "id": "mana",
     "face": {
       "front": {
-        "name": { "name": "Mana" },
+        "name": {
+          "name": "Mana"
+        },
         "type": "Mana",
         "cost": 0,
         "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana.png"
