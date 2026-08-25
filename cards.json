@@ -229,7 +229,7 @@
     "element": "Neutral",
     "archetype": "Generic",
     "effectCost": 2,
-    "rules": "When an opposing monster declares an attack: You may reveal this card from your hand. Tap 2 Mana. Change the attacking monster to Defense Stance. The attack ends. Then discard this card."
+    "rules": "When an opposing monster declares an attack: You may reveal this card from your hand. Burn 2 Mana. Choose one: HALT — End that attack. Change the attacking monster to Defense Stance. OVEREXTEND — The attack continues, but the attacking monster gets -1000 to its current combat value for that battle. If that monster is destroyed during this battle, draw 1 card. Then discard this card."
   },
   "i_saw_that_coming": {
     "id": "i_saw_that_coming",
@@ -249,7 +249,7 @@
     "element": "Neutral",
     "archetype": "Generic",
     "effectCost": 2,
-    "rules": "When your opponent activates a monster's activated effect: You may reveal this card from your hand. Tap 2 Mana. Increase that effect's activation cost by 2 Mana. Your opponent may pay the additional cost. If they do not, that effect ends. Then discard this card."
+    "rules": "When your opponent activates a monster effect: You may reveal this card from your hand. Burn 2 Mana. Your opponent chooses one: PAY UP — They Burn 3 Mana. That effect resolves normally. SAW IT COMING — Negate that effect. Then draw 1 card. Then discard this card."
   },
   "youre_not_getting_away_that_easy": {
     "id": "youre_not_getting_away_that_easy",
@@ -396,6 +396,27 @@
     "element": "Neutral",
     "archetype": "Generic",
     "rules": "Equip this card to a monster. Reckless Ascent — The equipped monster gets +1000 ATK and -1000 DEF. All or Nothing — When the equipped monster destroys an opposing monster by battle, draw 1 card. If the equipped monster is destroyed by battle, discard 1 card. Returning Edge — When this card is sent to the Graveyard, you may Burn 3 Mana to add it to your hand."
+  },
+  "crowd_control": {
+    "id": "crowd_control",
+    "face": {
+      "front": {
+        "name": {
+          "name": "Crowd Control"
+        },
+        "type": "Monster",
+        "cost": 3,
+        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/crowd-control.png"
+      }
+    },
+    "name": "Crowd Control",
+    "type": "Monster",
+    "cost": 3,
+    "element": "Spirit",
+    "archetype": "Generic",
+    "atk": 1700,
+    "def": 1900,
+    "rules": "Push & Pull — When this monster enters play, choose up to one adjacent monster and up to one non-adjacent monster. The adjacent monster gets -500 to its current combat value until end of turn. The non-adjacent monster gets +500 to its current combat value until end of turn."
   },
   "a_divine_wind": {
     "id": "a_divine_wind",
