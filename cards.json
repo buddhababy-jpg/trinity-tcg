@@ -397,27 +397,6 @@
     "archetype": "Generic",
     "rules": "Equip this card to a monster. Reckless Ascent — The equipped monster gets +1000 ATK and -1000 DEF. All or Nothing — When the equipped monster destroys an opposing monster by battle, draw 1 card. If the equipped monster is destroyed by battle, discard 1 card. Returning Edge — When this card is sent to the Graveyard, you may Burn 3 Mana to add it to your hand."
   },
-  "crowd_control": {
-    "id": "crowd_control",
-    "face": {
-      "front": {
-        "name": {
-          "name": "Crowd Control"
-        },
-        "type": "Monster",
-        "cost": 3,
-        "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/crowd-control.png"
-      }
-    },
-    "name": "Crowd Control",
-    "type": "Monster",
-    "cost": 3,
-    "element": "Spirit",
-    "archetype": "Generic",
-    "atk": 1700,
-    "def": 1900,
-    "rules": "Push & Pull — When this monster enters play, choose up to one adjacent monster and up to one non-adjacent monster. The adjacent monster gets -500 to its current combat value until end of turn. The non-adjacent monster gets +500 to its current combat value until end of turn."
-  },
   "a_divine_wind": {
     "id": "a_divine_wind",
     "face": {
