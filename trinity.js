@@ -1,404 +1,84 @@
-{
-  "name": "TRINITY Alpha 0.3",
-  "cardRotation": 90,
-  "customHelp": "TRINITY Alpha 0.3\n\nCore prototype rules:\n- 10 Life. A player loses when their Life reaches 0.\n- 4 Monster Slots arranged in a row.\n- Turn flow: Draw Phase, Stand Phase, Main Phase, End Phase.\n- Draw Phase: draw 1 card. The Main Deck may also be manually drawn from when an effect or player action allows an extra draw.\n- Stand Phase: ready your tapped cards.\n- Main Phase: play cards, activate effects, and declare attacks. Battles happen inside the Main Phase; after each battle resolves, play returns to the Main Phase.\n- End Phase: resolve end-of-turn effects, then pass the turn.\n- Monsters may enter in Attack Stance (upright) or Defense Stance (sideways). Only Attack Stance monsters can attack unless a card says otherwise.\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- After a monster attacks, tap it.\n- Attack vs Attack: compare the attacker's ATK to the defender's current ATK. If the attacker's ATK exceeds it, destroy the defender immediately. Attack Stance monsters do not use the BREAK process.\n- Attack vs Defense: compare the attacker's ATK to the defender's current DEF. If the attacker's ATK exceeds it, place a BREAK marker on the defender instead of destroying it.\n- Broken monsters remain on the field but do not protect Life. The next successful attack against a Broken monster destroys it.\n- Quick-Play Spells may be used on either player's turn. Regular Spells may only be used during their controller's turn.\n- Equip Cards attach to a monster and apply their printed effects while equipped. Equip Cards are managed manually on the field.\n- Legendary cards exist in three deck-building classes: Legendary Monster, Legendary Spell, and Legendary Equip. A deck may contain at most 1 card from each Legendary class.\n- Mana uses a separate 15-card Mana Deck. At the beginning of each of your turns, move up to 3 Mana from the Mana Deck to the Mana Zone. The Mana Zone cannot contain more than 15 Mana.\n- Tap Mana to pay costs.\n- Burn: return ALREADY-TAPPED Mana from your Mana Zone to the Mana Deck to pay a Burn cost. Burned Mana may be gained again on later turns.\n- Mana Guard: when an attack would reduce your Life, you may Burn Mana in sets of 3. Each 3 Mana Burned prevents 1 Life loss from that attack.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.\n- Destroyed and discarded cards are placed in the Graveyard.",
-  "deckBuilding": {
-    "mainFilters": [
-      "type",
-      "cost",
-      "element",
-      "archetype"
-    ],
-    "costCurveIgnoredTypes": [
-      "Mana",
-      "Leader"
-    ],
-    "formats": [
-      {
-        "title": "TRINITY Alpha",
-        "customCategories": [
-          "Leader"
-        ],
-        "gameplay": "Alpha",
-        "deckRuleset": "Alpha"
-      }
-    ],
-    "deckRulesets": {
-      "Alpha": {
-        "general": {
-          "min": 40,
-          "max": 40,
-          "maxPerCard": 3
-        },
-        "categories": [
-          {
-            "category": "Leader",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "category": "Legendary Monster",
-            "min": 0,
-            "max": 1,
-            "maxPerCard": 1
-          },
-          {
-            "category": "Legendary Spell",
-            "min": 0,
-            "max": 1,
-            "maxPerCard": 1
-          },
-          {
-            "category": "Legendary Equip",
-            "min": 0,
-            "max": 1,
-            "maxPerCard": 1
-          }
-        ]
-      }
+async function trinityGainMana() {
+  const manaZone = cards.ManaZone ?? [];
+  const manaDeck = cards.ManaDeck ?? [];
+
+  const availableSpace = Math.max(0, 15 - manaZone.length);
+
+  if (availableSpace <= 0) {
+    functions.chatLog("Mana Zone is already at the 15 Mana limit.");
+    return;
+  }
+
+  if (manaDeck.length <= 0) {
+    functions.chatLog("No Mana remains in the Mana Deck.");
+    return;
+  }
+
+  const amount = Math.min(3, availableSpace, manaDeck.length);
+
+  await functions.drawFromExtraDeck(
+    "ManaDeck",
+    amount,
+    false,
+    "ManaZone"
+  );
+
+  functions.chatLog(
+    "Gained " + amount + " Mana. Mana Zone: " +
+    (manaZone.length + amount) + "/15."
+  );
+}
+
+
+async function trinityDrawOne() {
+  const deck = cards.Deck ?? [];
+
+  if (deck.length <= 0) {
+    functions.chatLog("Main Deck is empty.");
+    return;
+  }
+
+  // Prefer a dedicated main-deck API if this TCG Arena build exposes one.
+  if (typeof functions.drawFromDeck === "function") {
+    try {
+      await functions.drawFromDeck(1, "Hand");
+      functions.chatLog("Drew 1 card.");
+      return;
+    } catch (error) {
+      console.warn("drawFromDeck failed; trying section draw.", error);
     }
-  },
-  "gameplay": {
-    "Alpha": {
-      "countersStartingValues": [
-        10
-      ],
-      "mulligan": {
-        "startingHandSize": 5,
-        "mulliganCount": {
-          "max": 1
-        },
-        "mulliganCycle": {
-          "info": "You may replace your entire opening hand once.",
-          "steps": [
-            "toBottom",
-            "draw"
-          ],
-          "selectionRange": {
-            "min": 5,
-            "max": 99
-          },
-          "keepCardsOrder": false
-        }
-      },
-      "newTurn": {
-        "drawOnStart": false,
-        "drawPerTurn": 1,
-        "sharedTurn": false
-      },
-      "draggableTokens": [
-        {
-          "id": "BREAK",
-          "name": "BREAK",
-          "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/break-token.png"
-        }
-      ],
-      "beforeGameStart": {
-        "initialBoardSetup": [
-          {
-            "createCardId": "mana",
-            "count": 15,
-            "destination": "ManaDeck"
-          }
-        ]
-      },
-      "sections": {
-        "categoriesAlreadyOnBoard": [
-          "Leader"
-        ],
-        "layout": {
-          "direction": "column",
-          "content": [
-            {
-              "direction": "row",
-              "isSymmetricalForOpponents": true,
-              "content": [
-                {
-                  "section": "Leader",
-                  "style": {
-                    "width": "26%"
-                  }
-                },
-                {
-                  "section": "Remove",
-                  "style": {
-                    "width": "14%"
-                  }
-                },
-                {
-                  "direction": "column",
-                  "style": {
-                    "width": "30%"
-                  },
-                  "content": [
-                    {
-                      "section": "Deck",
-                      "style": {
-                        "width": "100%"
-                      }
-                    },
-                    {
-                      "section": "DrawControl",
-                      "style": {
-                        "width": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "section": "Discard",
-                  "style": {
-                    "width": "30%"
-                  }
-                }
-              ]
-            },
-            {
-              "direction": "row",
-              "isSymmetricalForOpponents": true,
-              "content": [
-                {
-                  "section": "Monster1",
-                  "style": {
-                    "width": "25%"
-                  }
-                },
-                {
-                  "section": "Monster2",
-                  "style": {
-                    "width": "25%"
-                  }
-                },
-                {
-                  "section": "Monster3",
-                  "style": {
-                    "width": "25%"
-                  }
-                },
-                {
-                  "section": "Monster4",
-                  "style": {
-                    "width": "25%"
-                  }
-                }
-              ]
-            },
-            {
-              "direction": "row",
-              "isSymmetricalForOpponents": true,
-              "content": [
-                {
-                  "section": "ManaDeck",
-                  "style": {
-                    "width": "12%"
-                  }
-                },
-                {
-                  "section": "ManaZone",
-                  "style": {
-                    "width": "88%"
-                  }
-                }
-              ]
-            },
-            {
-              "section": "Hand",
-              "style": {
-                "width": "100%"
-              }
-            }
-          ]
-        },
-        "sectionsDict": {
-          "Leader": {
-            "isHidden": "no",
-            "height": 9,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": true,
-            "noAutoPayTo": true,
-            "noQuickActions": true
-          },
-          "Monster1": {
-            "isHidden": "no",
-            "height": 10,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": true,
-            "logWhenPlayed": true,
-            "keepTappedNewTurn": false
-          },
-          "Monster2": {
-            "isHidden": "no",
-            "height": 10,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": true,
-            "logWhenPlayed": true,
-            "keepTappedNewTurn": false
-          },
-          "Monster3": {
-            "isHidden": "no",
-            "height": 10,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": true,
-            "logWhenPlayed": true,
-            "keepTappedNewTurn": false
-          },
-          "Monster4": {
-            "isHidden": "no",
-            "height": 10,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": true,
-            "logWhenPlayed": true,
-            "keepTappedNewTurn": false
-          },
-          "Deck": {
-            "isHidden": "yes",
-            "height": 9,
-            "alignment": "DECK",
-            "displayedTitle": "Main Deck",
-            "noQuickActions": false,
-            "drawDestinations": {
-              "_default": "Hand"
-            },
-            "isHorizontalAllowed": false,
-            "isGroupForbidden": true
-          },
-          "Discard": {
-            "title": "Discard",
-            "isHidden": "no",
-            "height": 6,
-            "alignment": "NONE",
-            "displayedTitle": "Graveyard",
-            "isHorizontalAllowed": false,
-            "isGroupForbidden": true,
-            "noAutoPayTo": true,
-            "noQuickActions": false,
-            "opponentAlignment": false,
-            "enterTapped": false,
-            "enterSpun": false,
-            "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": false,
-            "logWhenPlayed": true
-          },
-          "Stack": {
-            "isHidden": "no",
-            "height": "HUGE",
-            "alignment": "NONE",
-            "displayedTitle": "Stack",
-            "isHorizontalAllowed": false,
-            "noAutoPayTo": true,
-            "logWhenPlayed": true,
-            "isDefaultSection": true,
-            "isGroupForbidden": true,
-            "opponentAlignment": false,
-            "noQuickActions": false,
-            "enterTapped": false,
-            "enterSpun": false,
-            "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": false
-          },
-          "Remove": {
-            "isHidden": "no",
-            "height": 5,
-            "alignment": "DECK",
-            "displayedTitle": "Removed"
-          },
-          "RemoveHidden": {
-            "isHidden": "yes",
-            "height": 5,
-            "alignment": "DECK",
-            "displayedTitle": ""
-          },
-          "ManaDeck": {
-            "isHidden": "yes",
-            "height": 9,
-            "alignment": "DECK",
-            "displayedTitle": "",
-            "drawDestinations": {
-              "_default": "ManaZone"
-            },
-            "noAutoPayTo": true,
-            "drawPerTurn": 3,
-            "noQuickActions": true,
-            "isHorizontalAllowed": false,
-            "isGroupForbidden": true
-          },
-          "ManaZone": {
-            "isHidden": "no",
-            "height": 9,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": false,
-            "noAutoPayTo": true,
-            "keepTappedNewTurn": false,
-            "noQuickActions": true,
-            "isGroupForbidden": true
-          },
-          "Hand": {
-            "isHidden": "opponent-only",
-            "height": 18,
-            "alignment": "CENTER",
-            "displayedTitle": "",
-            "isHorizontalAllowed": false,
-            "noAutoPayTo": true
-          },
-          "DrawControl": {
-            "type": "custom",
-            "defaultValue": {},
-            "blueprint": {
-              "type": "div",
-              "props": {
-                "style": {
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "width": "100%",
-                  "padding": "2px 0"
-                }
-              },
-              "children": [
-                {
-                  "type": "button",
-                  "children": "DRAW 1",
-                  "onClick": "await trinityDrawOne()",
-                  "props": {
-                    "style": {
-                      "fontWeight": "700",
-                      "padding": "4px 12px",
-                      "minWidth": "76px"
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "autoPlayFromHand": {
-          "Quick-Play": "Stack",
-          "Spell": "Stack",
-          "Legendary Spell": "Stack"
-        },
-        "autoPlayFromStack": {
-          "Quick-Play": "Discard",
-          "Spell": "Discard",
-          "Legendary Spell": "Discard"
-        }
-      }
+  }
+
+  // This helper is already used successfully by TRINITY for ManaDeck.
+  // TCG Arena builds that allow arbitrary deck sections can also use it for Deck.
+  if (typeof functions.drawFromExtraDeck === "function") {
+    try {
+      await functions.drawFromExtraDeck(
+        "Deck",
+        1,
+        false,
+        "Hand"
+      );
+      functions.chatLog("Drew 1 card.");
+      return;
+    } catch (error) {
+      console.warn("drawFromExtraDeck(Deck) failed.", error);
     }
-  },
-  "cards": {
-    "dataUrl": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/cards.json",
-    "cardBack": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/card-back.png",
-    "extraCardBacks": {
-      "Mana": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/mana-back.png",
-      "Leader": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/leader-back.png"
+  }
+
+  // Final compatibility attempts for builds exposing a generic draw helper.
+  if (typeof functions.draw === "function") {
+    try {
+      await functions.draw("Deck", 1, "Hand");
+      functions.chatLog("Drew 1 card.");
+      return;
+    } catch (error) {
+      console.warn("Generic draw failed.", error);
     }
-  },
-  "scriptsUrls": [
-    "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/trinity.js"
-  ]
+  }
+
+  functions.chatLog(
+    "Draw button could not access the Main Deck API. " +
+    "Use the Main Deck context menu and report this message."
+  );
 }
