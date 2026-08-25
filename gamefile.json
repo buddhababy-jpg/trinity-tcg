@@ -246,9 +246,19 @@
             "height": 6,
             "alignment": "DECK",
             "displayedTitle": "Main Deck",
-            "noQuickActions": false,
+            "noQuickActions": true,
             "drawDestinations": {
               "_default": "Hand"
+            },
+            "isDefaultSection": true,
+            "isHorizontalAllowed": false,
+            "isGroupForbidden": true,
+            "cardActionShortcut": {
+              "action": "MOVE",
+              "actionData": {
+                "destination": "Hand"
+              },
+              "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/draw-button.png"
             }
           },
           "Discard": {
@@ -307,17 +317,20 @@
             },
             "noAutoPayTo": true,
             "drawPerTurn": 3,
-            "noQuickActions": true
+            "noQuickActions": true,
+            "isHorizontalAllowed": false,
+            "isGroupForbidden": true
           },
           "ManaZone": {
             "isHidden": "no",
             "height": 9,
             "alignment": "CENTER",
             "displayedTitle": "",
-            "isHorizontalAllowed": true,
+            "isHorizontalAllowed": false,
             "noAutoPayTo": true,
             "keepTappedNewTurn": false,
-            "noQuickActions": true
+            "noQuickActions": true,
+            "isGroupForbidden": true
           },
           "Hand": {
             "isHidden": "opponent-only",
