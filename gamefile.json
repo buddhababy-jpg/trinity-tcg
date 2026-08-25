@@ -1,7 +1,7 @@
 {
-  "name": "TRINITY Alpha 0.3.2",
+  "name": "TRINITY Alpha 0.3.3",
   "cardRotation": 90,
-  "customHelp": "TRINITY Alpha 0.3.2\n\nCore prototype rules:\n- 10 Life. A player loses when their Life reaches 0.\n- 4 Monster Slots arranged in a row.\n- Turn flow: Draw Phase, Stand Phase, Main Phase, End Phase.\n- Draw Phase: draw 1 card. The Main Deck may also be manually drawn from when an effect or player action allows an extra draw.\n- Stand Phase: ready your tapped cards.\n- Main Phase: play cards, activate effects, and declare attacks. Battles happen inside the Main Phase; after each battle resolves, play returns to the Main Phase.\n- End Phase: resolve end-of-turn effects, then pass the turn.\n- Monsters may enter in Attack Stance (upright) or Defense Stance (sideways). Only Attack Stance monsters can attack unless a card says otherwise.\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- After a monster attacks, tap it.\n- Attack vs Attack: compare the attacker's ATK to the defender's current ATK. If the attacker's ATK exceeds it, destroy the defender immediately. Attack Stance monsters do not use the BREAK process.\n- Attack vs Defense: compare the attacker's ATK to the defender's current DEF. If the attacker's ATK exceeds it, place a BREAK marker on the defender instead of destroying it.\n- Broken monsters remain on the field but do not protect Life. The next successful attack against a Broken monster destroys it.\n- Quick-Play Spells may be used on either player's turn. Regular Spells may only be used during their controller's turn.\n- Equip Cards attach to a monster and apply their printed effects while equipped. Equip Cards are managed manually on the field.\n- Legendary cards exist in three deck-building classes: Legendary Monster, Legendary Spell, and Legendary Equip. A deck may contain at most 1 card from each Legendary class.\n- Mana uses a separate 15-card Mana Deck. At the beginning of each of your turns, move up to 3 Mana from the Mana Deck to the Mana Zone. The Mana Zone cannot contain more than 15 Mana.\n- Tap Mana to pay costs.\n- Burn: return ALREADY-TAPPED Mana from your Mana Zone to the Mana Deck to pay a Burn cost. Burned Mana may be gained again on later turns.\n- Mana Guard: when an attack would reduce your Life, you may Burn Mana in sets of 3. Each 3 Mana Burned prevents 1 Life loss from that attack.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.\n- Destroyed and discarded cards are placed in the Graveyard.",
+  "customHelp": "TRINITY Alpha 0.3.3\n\nCore prototype rules:\n- 10 Life. A player loses when their Life reaches 0.\n- 4 Monster Slots arranged in a row.\n- Turn flow: Draw Phase, Stand Phase, Main Phase, End Phase.\n- Draw Phase: draw 1 card. The Main Deck may also be manually drawn from when an effect or player action allows an extra draw.\n- Stand Phase: ready your tapped cards.\n- Main Phase: play cards, activate effects, and declare attacks. Battles happen inside the Main Phase; after each battle resolves, play returns to the Main Phase.\n- End Phase: resolve end-of-turn effects, then pass the turn.\n- Monsters may enter in Attack Stance (upright) or Defense Stance (sideways). Only Attack Stance monsters can attack unless a card says otherwise.\n- A monster may attack the turn it is summoned, except on the first turn of the game.\n- After a monster attacks, tap it.\n- Attack vs Attack: compare the attacker's ATK to the defender's current ATK. If the attacker's ATK exceeds it, destroy the defender immediately. Attack Stance monsters do not use the BREAK process.\n- Attack vs Defense: compare the attacker's ATK to the defender's current DEF. If the attacker's ATK exceeds it, place a BREAK marker on the defender instead of destroying it.\n- Broken monsters remain on the field but do not protect Life. The next successful attack against a Broken monster destroys it.\n- Quick-Play Spells may be used on either player's turn. Regular Spells may only be used during their controller's turn.\n- Equip Cards attach to a monster and apply their printed effects while equipped. Equip Cards are managed manually on the field.\n- Legendary cards exist in three deck-building classes: Legendary Monster, Legendary Spell, and Legendary Equip. A deck may contain at most 1 card from each Legendary class.\n- Mana uses a separate 15-card Mana Deck. At the beginning of each of your turns, move up to 3 Mana from the Mana Deck to the Mana Zone. The Mana Zone cannot contain more than 15 Mana.\n- Tap Mana to pay costs.\n- Burn: return ALREADY-TAPPED Mana from your Mana Zone to the Mana Deck to pay a Burn cost. Burned Mana may be gained again on later turns.\n- Mana Guard: when an attack would reduce your Life, you may Burn Mana in sets of 3. Each 3 Mana Burned prevents 1 Life loss from that attack.\n- Leaders begin in the Leader Zone. If a manifested Leader is destroyed, move it to Remove; it is permanently dead for the match.\n- Destroyed and discarded cards are placed in the Graveyard.",
   "deckBuilding": {
     "mainFilters": [
       "type",
@@ -116,25 +116,25 @@
                 {
                   "section": "Leader",
                   "style": {
-                    "width": "26%"
+                    "width": "20%"
                   }
                 },
                 {
                   "section": "Remove",
                   "style": {
-                    "width": "12%"
+                    "width": "20%"
                   }
                 },
                 {
                   "section": "Deck",
                   "style": {
-                    "width": "32%"
+                    "width": "20%"
                   }
                 },
                 {
                   "section": "Discard",
                   "style": {
-                    "width": "30%"
+                    "width": "20%"
                   }
                 }
               ]
@@ -243,18 +243,17 @@
           },
           "Deck": {
             "isHidden": "yes",
-            "height": "SMALL",
+            "height": 6,
             "alignment": "DECK",
-            "opponentAlignment": false,
-            "noAutoPayTo": true,
-            "isHorizontalAllowed": false,
-            "displayedTitle": "Main Deck — CLICK TO DRAW 1",
+            "displayedTitle": "Main Deck",
             "noQuickActions": false,
-            "enterTapped": false,
-            "enterSpun": false,
-            "isGroupForbidden": false,
-            "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": false
+            "cardActionShortcut": {
+              "action": "MOVE",
+              "actionData": {
+                "destination": "Hand"
+              },
+              "image": "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/assets/draw-button.png"
+            }
           },
           "Discard": {
             "title": "Discard",
@@ -358,6 +357,6 @@
     }
   },
   "scriptsUrls": [
-    "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/trinity.js?v=0.3.2"
+    "https://raw.githubusercontent.com/buddhababy-jpg/trinity-tcg/main/trinity.js?v=0.3.3"
   ]
 }
