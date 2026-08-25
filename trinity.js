@@ -31,26 +31,21 @@ async function trinityGainMana() {
 
 
 async function trinityDrawOne() {
-  const deck = cards.Deck ?? [];
+  // IMPORTANT:
+  // Do not check cards.Deck here. TCG Arena does not expose the hidden
+  // Main Deck through cards.Deck in this custom-control context, so that
+  // check falsely reports an empty deck even when cards remain.
 
-  if (deck.length <= 0) {
-    functions.chatLog("Main Deck is empty.");
-    return;
-  }
-
-  // Prefer a dedicated main-deck API if this TCG Arena build exposes one.
   if (typeof functions.drawFromDeck === "function") {
     try {
       await functions.drawFromDeck(1, "Hand");
       functions.chatLog("Drew 1 card.");
       return;
     } catch (error) {
-      console.warn("drawFromDeck failed; trying section draw.", error);
+      console.warn("TRINITY: drawFromDeck failed.", error);
     }
   }
 
-  // This helper is already used successfully by TRINITY for ManaDeck.
-  // TCG Arena builds that allow arbitrary deck sections can also use it for Deck.
   if (typeof functions.drawFromExtraDeck === "function") {
     try {
       await functions.drawFromExtraDeck(
@@ -62,23 +57,22 @@ async function trinityDrawOne() {
       functions.chatLog("Drew 1 card.");
       return;
     } catch (error) {
-      console.warn("drawFromExtraDeck(Deck) failed.", error);
+      console.warn("TRINITY: drawFromExtraDeck for Main Deck failed.", error);
     }
   }
 
-  // Final compatibility attempts for builds exposing a generic draw helper.
   if (typeof functions.draw === "function") {
     try {
       await functions.draw("Deck", 1, "Hand");
       functions.chatLog("Drew 1 card.");
       return;
     } catch (error) {
-      console.warn("Generic draw failed.", error);
+      console.warn("TRINITY: generic draw failed.", error);
     }
   }
 
   functions.chatLog(
-    "Draw button could not access the Main Deck API. " +
-    "Use the Main Deck context menu and report this message."
+    "DRAW 1 could not use this TCG Arena build's draw API. " +
+    "The Main Deck itself is not empty."
   );
 }
